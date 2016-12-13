@@ -1,0 +1,74 @@
+@import '../../../../theme/sass/conf/conf';
+
+.cke_source {
+  color: $dropdown-text!important;
+}
+
+.container {
+    margin-left: -15px;
+}
+.card-block {
+	padding:5px;
+}
+.table > thead > tr > th:first-child {
+    text-align: left;
+}
+.al-main {
+ //background-color: black;
+}
+h2, h3 {
+    color: aqua;
+}
+.al-main {
+   min-height: 900px;
+   //width: 100%;
+}
+
+.table > thead > tr > th {
+    font-size: 19px;
+    text-align: center;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+
+}
+
+.table > tbody > tr > td {
+    font-size: 15px;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.table > tbody > tr > td:last-child {
+    padding: 0 !important;
+}
+
+table tbody, table thead
+{
+    display: inline-block;
+}
+
+table tbody 
+{
+   overflow: auto;
+    max-height: 600px;
+
+}
+
+
+
+table {
+    width: 350px; /* can be dynamic */
+}
+
+th
+{
+    width: 75px;
+}
+
+.green {
+
+		color: green; 
+					
+}

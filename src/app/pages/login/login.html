@@ -1,0 +1,119 @@
+<!-- <div class="login-page animate">
+  <div class="row">
+    <div class="col-lg-4 col-lg-offset-4">
+          <img src="assets/images/3M.jpg" width="150px" class="user-avatar" />
+      <h1>3M Admin Portal</h1>
+      <form role="form">
+        <div class="form-content">
+          <div class="form-group">
+            <input type="text" class="form-control input-underline input-lg" id="" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control input-underline input-lg" id="" placeholder="Password">
+          </div>
+        </div>
+        <a class="btn rounded-btn" [routerLink]="['dashboard', 'home']"> Log in </a>
+      </form>
+    </div>  
+  </div>
+</div> -->
+
+ <div class="auth-main">
+  <div class="auth-block">
+    <!-- <img src="assets/img/3m.png" width="150px" class="user-avatar" /> -->
+   
+    <h1> 3M Admin</h1>
+   <!--  <a routerLink="/register" class="auth-link">New to ng2-admin? Sign up!</a> -->
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="form-horizontal">
+      <div class="form-group row" [ngClass]="{'has-error': (!email.valid && email.touched), 'has-success': (email.valid && email.touched)}">
+        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+
+        <div class="col-sm-10">
+          <input [formControl]="email" type="email" class="form-control" id="inputEmail3" placeholder="Email">
+        </div>
+      </div>
+      <div class="form-group row" [ngClass]="{'has-error': (!password.valid && password.touched), 'has-success': (password.valid && password.touched)}">
+        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+
+        <div class="col-sm-10">
+          <input [formControl]="password" type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        </div>
+      </div>
+      <!-- <div class="form-group row">
+        <div class=" col-lg-10">
+          <a class="btn rounded-btn" class="forgot-pass" routerLink = "/dashboard"> Log in </a>
+      </div> 
+      </div>-->
+      <div class="form-group row">
+        <div class=" col-sm-12">
+        <!-- <button [disabled]="!form.valid" type="submit" class="btn btn-default btn-auth">Sign in</button>  -->
+         <a class="btn rounded-btn" routerLink = "/dashboard"> Log in </a>
+           <a routerLink="/login" class="forgot-pass">Forgot password?</a>
+        </div>
+      </div>
+       
+    </form>
+<!-- <div class="MMM--media-element">
+<h3 class="MMM--hdg MMM--hdg_4 mix-MMM--hdg_spaced" style="font-size: 26px">
+
+<a href="/3M/en_US/company-us/all-3m-products/~/3M-Quality-Services?N=5002385+8707795+8709364+8711017+8717531+8717555+3293081138&amp;rt=rud" target="_self">3M™ Quality Services</a>
+
+</h3>
+          <div class="MMM--img mix-MMM--img_maxFancy">
+            
+              <a href="/3M/en_US/company-us/all-3m-products/~/3M-Quality-Services?N=5002385+8707795+8709364+8711017+8717531+8717555+3293081138&amp;rt=rud" target="_self">                 
+               <img src="./app/images/CDI_410x200.jpg" style="max-width:410px; max-height:200px;"> 
+              </a>
+              <div class="MMM--svgHover" style="max-width:410px;"></div>
+            
+            
+            
+          </div>
+          
+        </div>
+        <br>
+<div class="MMM--media-bd">
+<div class="MMM--bodyCopy MMM--wysiwyg">
+
+<p dir="ltr" style="font-size: 16px;width:20%">3M™ Quality Services helps quality leaders and CDI managers identify the root causes of quality issues by first determining the accuracy of documentation.</p>
+
+</div>
+
+</div>
+<div class="MMM--media-element">
+<h3 class="MMM--hdg MMM--hdg_4 mix-MMM--hdg_spaced" style="font-size: 26px">
+
+<a href="/3M/en_US/company-us/all-3m-products/~/3M-APR-DRG-Services?N=5002385+8707795+8709364+8711017+8717531+8717556+3292681997&amp;rt=rud" target="_self">3M™ APR DRG Services</a>
+
+</h3>
+<div class="MMM--img mix-MMM--img_maxFancy">
+
+<a href="/3M/en_US/company-us/all-3m-products/~/3M-APR-DRG-Services?N=5002385+8707795+8709364+8711017+8717531+8717556+3292681997&amp;rt=rud" target="_self">                 
+ <img src="./app/images/Quality.gif" style="max-width:410px; max-height:200px;"> 
+</a>
+<div class="MMM--svgHover" style="max-width:410px;"></div>
+
+</div>
+
+</div>
+
+<div class="MMM--media-bd">
+<div class="MMM--bodyCopy MMM--wysiwyg">
+
+<p dir="ltr"  style="font-size: 16px;width:20%">Training and educational resources to assist a hospital with the transition to 3M™ APR DRGs by a state Medicaid or commerical health plan. From comprehensive consulting to modular services, 3M™ APR DRG Services can help any provider make a seamless transition.</p>
+
+</div>
+</div> -->
+    <!-- <div class="auth-sep"><span><span>or Sign in with one click</span></span></div>
+
+    <div class="al-share-auth">
+      <ul class="al-share clearfix">
+        <li><i class="socicon socicon-facebook" title="Share on Facebook"></i></li>
+        <li><i class="socicon socicon-twitter" title="Share on Twitter"></i></li>
+        <li><i class="socicon socicon-google" title="Share on Google Plus"></i></li>
+      </ul>
+    </div> -->
+  </div>
+</div>
+ 

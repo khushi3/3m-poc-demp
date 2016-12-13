@@ -1,0 +1,84 @@
+
+<!-- <li *ngFor="let item of items">{{item.s}}
+<ul>
+				<li *ngFor="let item of items>
+					{{ items.client }}
+				</li>
+				<th><button class="button" (click)="selectFun()">Select All</button></th>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Status</th>
+				<td class = "form-group">
+					<input type = "checkbox" align="center" style="height:20px;width:20px" [checked] = "item['checked']"/></td>
+			</ul>
+</li> 
+
+-->
+
+<div class="container">
+	<h2>Elastic Search Information</h2>
+	<div class="card-block">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Cluster Name : {{items.clusterName}}</th>
+					<th>Cluster Status : {{items.status}}</th>
+					<th>Cluster Active Shards : {{items.activeShards}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="3"></td>
+				</tr>
+
+			</tbody> 
+		</table>
+	</div>
+</div>
+
+<div class="container">
+	<h3>Search Results</h3>
+	<div class="card-block">
+		<table class="table" >
+			<thead>
+				<tr>
+					<th style="width: 75px">Host</th>
+					<th style="width: 140px">Client</th>
+					<th style="width: 45px">Method</th>
+					<th style="width: 456px">Request</th>
+					<th>Status</th>
+					<th style="width: 677px">Message</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let item of items1">
+					<td>{{item.host}}</td>
+					<td>{{item.client}}</td>
+					<td  style="width: 45px">{{item.method}}</td>
+					<td >{{item.request}}</td>
+					<td>{{item.status}}</td>
+					<!--<td *ngIf="item.status == 200" style=" color: green">
+						{{item.status}}
+					</td>
+					<td *ngIf='item.status == 401' style=" color: red">
+						{{item.status}}
+					</td>
+				 	 <td *ngIf='item.status == 304' style=" color: orange">
+						{{item.status}}
+					</td>
+					<td *ngIf='item.status == 302' style=" color: grey">
+						{{item.status}}
+					</td> -->
+					
+
+					<td>{{item.message}}</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+
+

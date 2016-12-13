@@ -1,0 +1,21 @@
+
+[
+	{	
+		"value": 1,
+    	"s": "ABE Gateway",
+    	"d": "Gateway service",
+    	"st": "running properly"
+ 	},
+    {
+        "value": 2,
+        "s": "ABE Queue",
+        "d": "Queue service",
+        "st": "operating normally"
+        },
+    {
+    	"value" : 3,
+        "s": "EPRS",
+        "d": "rest service",
+        "st": "currently down"
+    }
+]
