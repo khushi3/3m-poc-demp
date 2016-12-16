@@ -17,7 +17,7 @@ import { HoverTable } from './components/basicTables/components/hoverTable';
 import { CondensedTable } from './components/basicTables/components/condensedTable';
 import { ContextualTable } from './components/basicTables/components/contextualTable';
 import { SmartTablesService } from './components/smartTables/smartTables.service';
-import { RestService } from  './components/smartTables/rest.service';
+import { RestService } from  './smartTables/rest.service';
 
 
 @NgModule({

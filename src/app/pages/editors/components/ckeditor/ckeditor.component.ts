@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation, OnInit} from '@angular/core';
 import { RestService } from  './rest.service';
 //import './ckeditor.loader.ts';
 
+
 @Component({
 	selector: 'ckeditor-component', 
 	encapsulation: ViewEncapsulation.None,
