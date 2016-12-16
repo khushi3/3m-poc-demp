@@ -5,7 +5,6 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { LocalDataSource } from 'ng2-smart-table';
 // import { ServerDataSource } from 'ng2-smart-table/build/src/ng2-smart-table/lib/data-source/server/server.data-source';
 import { HttpModule,Http } from '@angular/http';
-import  {FilterComponent} from 
 
 @Component({
   selector: 'basic-tables',
@@ -17,7 +16,7 @@ import  {FilterComponent} from
 export class SmartTables {
 
   query: string = '';
-// public filteredcount;
+public filteredcount;
  
   settings = {
     // add: {
@@ -75,6 +74,8 @@ export class SmartTables {
     this.getData().then((data) => {
       this.source.load(data);
       // this.filteredcount = this.source.count();
+     
+
     });
   
   }
