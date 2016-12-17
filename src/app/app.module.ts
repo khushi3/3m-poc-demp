@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
-import {AgGridModule} from 'ag-grid-ng2/main';
+//import {AgGridModule} from 'ag-grid-ng2/main';
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -52,21 +52,6 @@ type StoreType = {
   imports: [ // import Angular's modules
     BrowserModule,
     Ng2SmartTableModule,
-    AgGridModule.withComponents(
-            [
-                // SquareComponent,
-                // CubeComponent,
-                // ParamsComponent,
-                // RatioParentComponent,
-                // ClickableParentComponent,
-                // NumericEditorComponent,
-                // MoodEditorComponent,
-                // MoodRendererComponent,
-                // StyledComponent,
-                // NameAndAgeRendererComponent,
-                // MedalRendererComponent,
-                // PartialMatchFilterComponent
-            ]),
     HttpModule,
     RouterModule,
     FormsModule,
