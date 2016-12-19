@@ -14,16 +14,26 @@ import {TrafficChartService} from './trafficChart.service';
 export class TrafficChart {
 
   public doughnutData: Array<Object>;
+  public totalCount: any;
 
   constructor(private trafficChartService:TrafficChartService) {
-    this.doughnutData = trafficChartService.getData();
+
+   this.trafficChartService.getData().subscribe(data => {
+      this.doughnutData = data.statusChartValues;
+      this.totalCount = data.total;
+      this._loadDoughnutCharts();
+    }, error => console.log('Could not load List of Service'));
+   
+    //this.doughnutData = this.trafficChartService.getData().statusChartValues;
   }
 
-  ngAfterViewInit() {
+ //console.log('sec 5' +this.doughnutData);
+  /*ngAfterViewInit() {
     this._loadDoughnutCharts();
-  }
+  }*/
 
   private _loadDoughnutCharts() {
+  console.log('sec 3' +this.doughnutData);
     let el = jQuery('.chart-area').get(0);
     new Chart(el.getContext('2d')).Doughnut(this.doughnutData, {
       segmentShowStroke: false,

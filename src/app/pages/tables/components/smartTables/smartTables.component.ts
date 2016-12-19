@@ -8,7 +8,6 @@ import { HttpModule,Http } from '@angular/http';
 
 @Component({
   selector: 'basic-tables',
-  // pipes: [MyFilter],
   encapsulation: ViewEncapsulation.None,
   styles: [require('./smartTables.scss')],
   template: require('./smartTables.html')
@@ -16,26 +15,23 @@ import { HttpModule,Http } from '@angular/http';
 export class SmartTables {
 
   query: string = '';
-public filteredcount;
- 
+  public filteredcount;
+
   settings = {
-    // add: {
-    //   addButtonContent: '<i class="ion-ios-plus-outline"></i>',
-    //   createButtonContent: '<i class="ion-checkmark"></i>',
-    //   cancelButtonContent: '<i class="ion-close"></i>',
-    // },
-    // edit: {
-    //   editButtonContent: '<i class="ion-edit"></i>',
-    //   saveButtonContent: '<i class="ion-checkmark"></i>',
-    //   cancelButtonContent: '<i class="ion-close"></i>',
-    // },
-    // delete: {
-    //   deleteButtonContent: '<i class="ion-trash-a"></i>',
-    //   confirmDelete: true
-    // },
+    hideHeader: true,
+    actions: {
+      columnTitle: 'Actions',
+      add: false,
+      edit: false,
+      delete: false
+    },
+    pager: {
+                perPage: 8
+            },
+
     columns: {
       host: {
-        title: 'Host Name',
+        title: 'Server',
         type: 'string'
       },
       client: {
@@ -61,11 +57,11 @@ public filteredcount;
   source: LocalDataSource;
   public items = [];
 
-   
+
 
   constructor(protected service: RestService) {
     this.source = new LocalDataSource();
-  
+
     this.service.checkCredentials1().subscribe(data => {
       this.items = data.elasticSearchValues;
       console.log(this.items)
@@ -74,17 +70,17 @@ public filteredcount;
     this.getData().then((data) => {
       this.source.load(data);
       // this.filteredcount = this.source.count();
-     
+
 
     });
-  
+
   }
 
-          getData(): Promise<any> {
-            return new Promise((resolve, reject) => {
-              setTimeout(() => {
-                resolve(this.items);
-              }, 2000);
-            });
-          }
-        }
+  getData(): Promise<any> {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(this.items);
+      }, 2000);
+    });
+  }
+}

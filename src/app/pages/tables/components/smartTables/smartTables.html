@@ -2,7 +2,9 @@
 
   <div class="row">
     <ba-card title="Elastic Search Information" baCardClass="with-scroll">
+    <h3 class="pull-right" style="    font-size: 15px;" > Total Count: {{ source.count()}}</h3>
       <ng2-smart-table [settings]="settings" [source]="source"> </ng2-smart-table>
+  
     </ba-card>
     </div>
     </div>

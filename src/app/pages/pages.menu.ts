@@ -14,44 +14,6 @@ export const PAGES_MENU = [
       }
     }
   },
-  // {
-  //   path: 'editors',
-  //   data: {
-  //     menu: {
-  //       title: '3M Application',
-  //       icon: 'ion-edit',
-  //       selected: false,
-  //       expanded: false,
-  //       order: 100,
-  //     }
-  //   },
-  //   children: [
-  //   {
-  //     path: 'ckeditor',
-  //     data: {
-  //       menu: {
-  //         title: 'App1',
-  //       }
-  //     }
-  //   },
-  //   {
-  //     path: 'ckeditor1',
-  //     data: {
-  //       menu: {
-  //         title: 'App2',
-  //       }
-  //     }
-  //   },
-  //   {
-  //     path: 'ckeditor2',
-  //     data: {
-  //       menu: {
-  //         title: 'App3',
-  //       }
-  //     }
-  //   }
-  //   ]
-  // },
 
   {
     path: 'charts',
@@ -88,14 +50,7 @@ export const PAGES_MENU = [
       }
     },
     children: [
-    // {
-    //   path: 'basictables',
-    //   data: {
-    //     menu: {
-    //       title: 'App1',
-    //     }
-    //   }
-    // },
+ 
     {
       path: 'smarttables',
       data: {
@@ -106,37 +61,7 @@ export const PAGES_MENU = [
     }
     ]
   },
-
-  {
-    path: '',
-    data: {
-      menu: {
-        title: 'Pages',
-        icon: 'ion-document',
-        selected: false,
-        expanded: false,
-        order: 650,
-      }
-    },
-    children: [
-    {
-      path: ['/login'],
-      data: {
-        menu: {
-          title: 'Login'
-        }
-      }
-    },
-    {
-      path: ['/register'],
-      data: {
-        menu: {
-          title: 'Register'
-        }
-      }
-    }
-    ]
-  },
+ 
   ]
 }
 ];
