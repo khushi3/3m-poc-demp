@@ -5,7 +5,7 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { LocalDataSource } from 'ng2-smart-table';
 // import { ServerDataSource } from 'ng2-smart-table/build/src/ng2-smart-table/lib/data-source/server/server.data-source';
 import { HttpModule,Http } from '@angular/http';
-
+import myGlobals = require('./globals');
 @Component({
   selector: 'basic-tables',
   encapsulation: ViewEncapsulation.None,
@@ -16,7 +16,6 @@ export class SmartTables {
 
   query: string = '';
   public filteredcount;
-
   settings = {
     hideHeader: true,
     actions: {
@@ -26,29 +25,29 @@ export class SmartTables {
       delete: false
     },
     pager: {
-                perPage: 8
-            },
+      perPage: 9
+    },
 
     columns: {
       host: {
-        title: 'Server',
+        title: myGlobals.label_server,
         type: 'string'
       },
       client: {
-        title: 'Client',
+        title: myGlobals.label_Client,
         type: 'string'
       },
       method: {
-        title: 'Method',
+        title: myGlobals.label_Method,
         type: 'string'
       },
 
       status: {
-        title: 'Status',
+        title: myGlobals.label_Status,
         type: 'number'
       },
       request: {
-        title: 'Request',
+        title: myGlobals.label_Request,
         type: 'string'
       }
     }
@@ -57,23 +56,18 @@ export class SmartTables {
   source: LocalDataSource;
   public items = [];
 
-
-
   constructor(protected service: RestService) {
     this.source = new LocalDataSource();
 
-    this.service.checkCredentials1().subscribe(data => {
+    this.service.searchAllDataFromServer().subscribe(data => {
       this.items = data.elasticSearchValues;
       console.log(this.items)
     }, error => console.log('Could not load List of Service'));
 
     this.getData().then((data) => {
-      this.source.load(data);
+      this.source.load(data); 
       // this.filteredcount = this.source.count();
-
-
     });
-
   }
 
   getData(): Promise<any> {

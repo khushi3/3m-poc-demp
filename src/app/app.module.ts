@@ -14,14 +14,7 @@ import { routing } from './app.routing';
 // App is our top level component
 import { App } from './app.component';
 import {FromComponentComponent} from "./from-component.component";
-// import {SquareComponent} from "./square.component";
-// import {ParamsComponent} from "./params.component";
-// import {CubeComponent} from "./cube.component";
-// import {FromRichComponent} from "./from-rich.component";
-// import {ClickableModule} from "./clickable.module";
-// import {RatioModule} from "./ratio.module";
-// import {RatioParentComponent} from "./ratio.parent.component";
-// import {ClickableParentComponent} from "./clickable.parent.component";
+
 // editor
 import { AppState, InternalStateType } from './app.service';
 import { GlobalState } from './global.state';
@@ -29,6 +22,7 @@ import { NgaModule } from './theme/nga.module';
 import { PagesModule } from './pages/pages.module';
 import { RestService } from  './smartTables/rest.service';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
+
 // Application wide providers
 const APP_PROVIDERS = [
   AppState,
@@ -54,18 +48,6 @@ type StoreType = {
     Ng2SmartTableModule,
     AgGridModule.withComponents(
             [
-                // SquareComponent,
-                // CubeComponent,
-                // ParamsComponent,
-                // RatioParentComponent,
-                // ClickableParentComponent,
-                // NumericEditorComponent,
-                // MoodEditorComponent,
-                // MoodRendererComponent,
-                // StyledComponent,
-                // NameAndAgeRendererComponent,
-                // MedalRendererComponent,
-                // PartialMatchFilterComponent
             ]),
     HttpModule,
     RouterModule,

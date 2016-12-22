@@ -20,6 +20,7 @@ import { SmartTablesService } from './components/smartTables/smartTables.service
 import { RestService } from  './smartTables/rest.service';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -44,6 +45,7 @@ import { RestService } from  './smartTables/rest.service';
     BasicTablesService,
     SmartTablesService,
     RestService
+    
   ]
 })
 export default class TablesModule {}

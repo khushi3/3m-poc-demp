@@ -1,31 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HttpModule,Http} from '@angular/http';
+import myGlobals = require('./globals');
+
 
 @Injectable()
 export class RestService {
-	 constructor(private http: Http){
-      this.http = http;
-  }
+	 private actionUrl: string;
 
+  constructor(private http: Http) {
+ 
+        this.actionUrl = myGlobals.ServerWithApiUrl;
+        this.http = http;
+ 
+       
+    }
 
-	checkCredentials() {
-		return this.http.get('http://172.16.103.25:8080/ElasticSearchClient/elk/clusterHealth')
+	searchDataFromServer() {
+		return this.http.get(this.actionUrl)
 		.map(response => response.json());
 
 	}
 
-	checkCredentials1() {
-		return this.http.get('http://172.16.103.25:8080/ElasticSearchClient/elk/searchAll')
+	searchAllDataFromServer() {
+		return this.http.get(this.actionUrl)
 		.map(response => response.json());
 	}
-
-	getData(): Promise<any> {
-   	 return new Promise((resolve, reject) => {
-    	  setTimeout(() => {
-   	     resolve(this.http.get('http://172.16.103.25:8080/ElasticSearchClient/elk/searchAll'));
-   	   }, 2000);
-  	  });
- 	}
 }
-
-	
