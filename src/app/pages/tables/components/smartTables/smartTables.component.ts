@@ -6,12 +6,14 @@ import { LocalDataSource } from 'ng2-smart-table';
 // import { ServerDataSource } from 'ng2-smart-table/build/src/ng2-smart-table/lib/data-source/server/server.data-source';
 import { HttpModule,Http } from '@angular/http';
 import myGlobals = require('./globals');
+
 @Component({
   selector: 'basic-tables',
   encapsulation: ViewEncapsulation.None,
   styles: [require('./smartTables.scss')],
   template: require('./smartTables.html')
 })
+
 export class SmartTables {
 
   query: string = '';
