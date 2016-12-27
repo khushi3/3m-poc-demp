@@ -1,14 +1,19 @@
 import {Injectable} from '@angular/core';
 import {BaThemeConfigProvider, colorHelper} from '../../../theme';
+import { Http } from '@angular/http';
 
 @Injectable()
 export class PieChartService {
 
-  constructor(private _baConfig:BaThemeConfigProvider) {
+  constructor(private _baConfig:BaThemeConfigProvider,private http:Http) {
   }
 
   getData() {
-    let pieColor = this._baConfig.get().colors.custom.dashboardPieChart;
+    
+    return this.http.get('http://172.16.103.25:8080/ElasticSearchClient/elk/statusChart')
+                    .map(response => response.json());
+
+   /* let pieColor = this._baConfig.get().colors.custom.dashboardPieChart;
     return [
       {
         color: pieColor,
@@ -31,6 +36,6 @@ export class PieChartService {
         stats: '32,592',
         icon: 'refresh',
       }
-    ];
+    ];*/
   }
 }

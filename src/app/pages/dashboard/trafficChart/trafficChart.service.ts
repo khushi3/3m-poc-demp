@@ -1,11 +1,16 @@
 import {Injectable} from '@angular/core';
 import {BaThemeConfigProvider, colorHelper} from '../../../theme';
 import { Http } from '@angular/http';
+import myGlobals = require('../../tables/components/smartTables/globals');
 
 @Injectable()
 export class TrafficChartService {
+  private actionUrl: string;
 
   constructor(private _baConfig:BaThemeConfigProvider, private http:Http) {
+
+    this.actionUrl = myGlobals.ServerWithApiUrlStatus;
+    this.http = http;
   }
 
 
@@ -13,7 +18,7 @@ export class TrafficChartService {
     //let dashboardColors = this._baConfig.get().colors.dashboard;
     //public newobject = [];
 
-return this.http.get('http://172.16.103.25:8080/ElasticSearchClient/elk/statusChart')
+return this.http.get(this.actionUrl)
                     .map(response => response.json());
 
     //return newObject;

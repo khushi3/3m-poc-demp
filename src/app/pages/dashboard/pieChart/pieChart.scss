@@ -91,3 +91,30 @@
     margin-top: 0;
   }
 }
+
+.ct-label {
+    fill: #eceeef !important;
+    font-size: 1.00rem !important;
+}
+
+.ct-series-a .ct-slice-pie, .ct-series-a .ct-area {
+    fill: #4CAF50 !important;
+}
+
+.ct-series-b .ct-slice-pie, .ct-series-b .ct-area {
+    fill: #3c4eb9 !important;
+}
+.ct-series-d .ct-slice-pie, .ct-series-d .ct-area {
+    fill: #4A235A !important;
+}
+.ct-series-c .ct-slice-pie, .ct-series-c .ct-area {
+    fill: #E74C3C !important;
+}
+.ct-series-e .ct-slice-pie, .ct-series-e .ct-area {
+    fill: #F7F9F9 !important;
+}
+
+.ct-series-a .ct-point, .ct-series-a .ct-line, .ct-series-a .ct-bar{
+  stroke: #4CAF50 !important;
+}
+
