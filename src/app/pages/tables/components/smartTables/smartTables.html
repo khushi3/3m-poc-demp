@@ -1,10 +1,41 @@
-<div class="widgets">
 
+<div class="widgets">
 	<div class="row">
 		<ba-card title="Elastic Search Information" baCardClass="with-scroll">
-			<h3 class="pull-right" style="    font-size: 15px;" >Showing: {{ source.count()}} Out Of 1500</h3>
-			<ng2-smart-table [settings]="settings" [source]="source"> </ng2-smart-table>
 			
-		</ba-card>
+			<div class="col-md-10">
+				<h3 class="pull-right"  style="font-size: 15px;" >Showing {{ source.count()}} of {{filteredcount}} entries
+				</h3>
+			</div>
+
+			<div class="col-md-1">
+				<h3 class="pull-right"  style="font-size: 15px;" >
+					<label>Rows Per Page:</label>
+				</h3>
+			</div>
+			<div class="col-md-1">
+                <h3 class="pull-right"  style="font-size: 15px;" >
+                
+                <select  
+                	[ngModel]="selectedPageObj" (ngModelChange)="onChangePage($event)" name="sel3">
+                 <option [ngValue]="i" *ngFor="let i of rowPerPage">{{i.page}}</option>
+                   <!--
+						ngModelChange)="ngOnChanges($event.target.value)">
+                     <option [ngValue]="25">25</option>
+                    <option [ngValue]="50">50</option>
+                    <option [ngValue]="100">100</option>		
+                    <option [ngValue]="200">200</option>
+                    <option [ngValue]="300">300</option>
+                    <option [ngValue]="400">400</option>
+                    <option [ngValue]="500">500</option> -->
+                </select>
+                </h3>
+            </div>
+            
+		<div class="col-md-12" style="object-position: fixed;">
+			<ng2-smart-table [settings]="settings" [source]="source" 
+			(deleteConfirm)="onDeleteConfirm($event)"> </ng2-smart-table>
+		</div>		
+	</ba-card>
 	</div>
 </div>

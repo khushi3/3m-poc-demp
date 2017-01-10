@@ -108,7 +108,7 @@
   span {
     display: block;
     font-size: 18px;
-    color: $content-text;
+    color: #000;
   }
 }
 
@@ -126,7 +126,7 @@
   box-shadow: none;
   .progress-bar {
     height: 4px;
-    background-color: $progress-default;
+    background-color: gray;
     box-shadow: none;
   }
 }

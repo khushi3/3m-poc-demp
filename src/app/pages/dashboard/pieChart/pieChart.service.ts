@@ -10,7 +10,7 @@ export class PieChartService {
 
   getData() {
     
-    return this.http.get('http://172.16.103.25:8080/ElasticSearchClient/elk/statusChart')
+    return this.http.get('http://172.16.103.47:8080/ElasticSearchClient/elk/statusChart')
                     .map(response => response.json());
 
    /* let pieColor = this._baConfig.get().colors.custom.dashboardPieChart;

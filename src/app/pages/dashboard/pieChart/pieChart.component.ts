@@ -88,7 +88,9 @@ export class PieChart {
        
  
 this.simplePieData= {series: simplePieValue};
-this.simpleBarData= {label:[barDataLabels,barDataLabels],series:[barDataValues,barDataValues]};
+//this.simpleBarData= {label:[barDataLabels,barDataLabels],series:[barDataValues,barDataValues]};
+
+this.simpleBarData= {labels:barDataLabels,series:[barDataValues,barDataLabels]};
 
 //this.labelsPieColor=this.pieColor;
 

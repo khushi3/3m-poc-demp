@@ -2,32 +2,37 @@
 
 .ng2-smart-table-container table.ng2-smart-table {
 th, td {
-border: 1px solid $border-light !important;
+border: 1px solid #ddd !important;
 line-height: 35px;
 vertical-align: middle;
 }
 
-color: $default-text;
+tbody>tr:nth-child(odd){
+    background-color: #f9f9f9;
+}
+
+
+color: #000;
 
 input {
 line-height: 1.5 !important;
 }
 
 tbody {
-tr:hover {
-background: rgba(0, 0, 0, 0.03);
+tr:hover {	
+background: rgba(0, 0, 0, 0.10);
 }
 }
 
 a.ng2-smart-sort-link {
 font-size: 14px !important;
-color: $default-text;
+color: #000;
 font-weight: $font-bolder;
 &.sort {
 font-weight: $font-bolder !important;
 
 &::after {
-border-bottom-color: $default-text !important;
+border-bottom-color: #000 !important;
 }
 }
 }
@@ -43,7 +48,7 @@ text-align: center;
 
 a.ng2-smart-action {
 font-size: 14px !important;
-color: $default-text;
+color: #000;
 padding: 0 5px;
 display: inline-block;
 
@@ -59,18 +64,31 @@ justify-content: center;
 }
 
 .al-main {
-background-color: #000000;
+background-color: #e5e5e5;
 color: #000000;
 }
 
 main {
 color: #000000;
-background-color: #5f9ea0;
+background-color: #e5e5e5;
+}
+
+.card.with-scroll .card-body {
+	color: #000;
+    height: calc(100% - 44px);
+    overflow-y: scroll;
+    background-color: #fff;
+    box-shadow: 3px 5px 5px #888888;
+}
+
+.card-header{
+  background-image: -webkit-linear-gradient(top, #fff 0, #f2f2f2 100%);
 }
 
 .card-title {
 font-size: 16px;
 font-weight: bold;
+color : #000;
 }
 .ng2-smart-table-container table.ng2-smart-table td {
 line-height: 26px;
@@ -84,5 +102,13 @@ line-height: 26px;
 
 .ng2-smart-row.selected {
   white-space: normal;
+}
+	
+/*.channels-block {
+    width: 60%;
+}*/
+
+.ng2-smart-titles{
+    box-shadow: 0px 2px 0px #888888;
 }
 
