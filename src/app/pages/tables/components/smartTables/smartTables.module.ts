@@ -16,7 +16,6 @@ import { BorderedTable } from './components/basicTables/components/borderedTable
 import { HoverTable } from './components/basicTables/components/hoverTable';
 import { CondensedTable } from './components/basicTables/components/condensedTable';
 import { ContextualTable } from './components/basicTables/components/contextualTable';
-import { SmartTablesService } from './components/smartTables/smartTables.service';
 import { RestService } from  './smartTables/rest.service';
 
 
@@ -43,7 +42,6 @@ import { RestService } from  './smartTables/rest.service';
   ],
   providers: [
     BasicTablesService,
-    SmartTablesService,
     RestService
     
   ]

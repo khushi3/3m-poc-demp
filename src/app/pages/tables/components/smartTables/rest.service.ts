@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpModule,Http} from '@angular/http';
-import myGlobals = require('./globals');
+//import myGlobals = require('./globals');
+
+import myGlobals = require('../../../../global.config');
 
 
 @Injectable()

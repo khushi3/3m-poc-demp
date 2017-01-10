@@ -8,7 +8,6 @@ import { routing }       from './tables.routing';
 import { Tables } from './tables.component';
 import { SmartTables } from './components/smartTables/smartTables.component';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
-import { SmartTablesService } from './components/smartTables/smartTables.service';
 import { RestService } from  './components/smartTables/rest.service';
 
 
@@ -27,7 +26,6 @@ import { RestService } from  './components/smartTables/rest.service';
     
   ],
   providers: [
-    SmartTablesService,
     RestService
   ]
 })

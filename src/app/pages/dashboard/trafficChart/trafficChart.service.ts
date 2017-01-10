@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {BaThemeConfigProvider, colorHelper} from '../../../theme';
 import { Http } from '@angular/http';
-import myGlobals = require('../../tables/components/smartTables/globals');
+import myGlobals = require('../../../../app/global.config');
 
 @Injectable()
 export class TrafficChartService {

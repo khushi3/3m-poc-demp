@@ -6,7 +6,7 @@ import { LocalDataSource } from 'ng2-smart-table';
 // import { ServerDataSource } from 'ng2-smart-table/build/src/ng2-smart-table/lib/data-source/server/server.data-source';
 import { HttpModule,Http } from '@angular/http';
 import {NgForm} from '@angular/forms';
-import myGlobals = require('./globals');
+import myGlobals = require('../../../../global.config');
 import {PagerComponent} from 'ng2-smart-table/pager';
 
 @Component({

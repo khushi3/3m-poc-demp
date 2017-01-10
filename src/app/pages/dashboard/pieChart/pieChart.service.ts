@@ -2,15 +2,20 @@ import {Injectable} from '@angular/core';
 import {BaThemeConfigProvider, colorHelper} from '../../../theme';
 import { Http } from '@angular/http';
 
+import myGlobals = require('../../../global.config');
+
 @Injectable()
 export class PieChartService {
 
+  private actionUrl: string;
+
   constructor(private _baConfig:BaThemeConfigProvider,private http:Http) {
+    this.actionUrl = myGlobals.ServerWithApiUrlStatus;
   }
 
   getData() {
     
-    return this.http.get('http://172.16.103.47:8080/ElasticSearchClient/elk/statusChart')
+    return this.http.get(this.actionUrl)
                     .map(response => response.json());
 
    /* let pieColor = this._baConfig.get().colors.custom.dashboardPieChart;
