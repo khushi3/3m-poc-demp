@@ -37,7 +37,6 @@ export class SmartTables {
 
     },
     pager: {
-      //perPage: this.pagenum,//this.onChangePage(this.num),
         perPage: 10,
     },
      add: {
@@ -56,12 +55,7 @@ export class SmartTables {
     },
 
     columns: {
-      /*checkbox: {
-        title: 'Select',
-        type: 'html',
-        valuePrepareFunction: (value) => { return this._sanitizer.bypassSecurityTrustHtml(this.input); },
-        filter: true,
-      },*/
+     
       host: {
         title: myGlobals.label_server,
         type: 'string'

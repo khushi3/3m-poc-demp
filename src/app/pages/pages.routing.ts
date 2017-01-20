@@ -13,7 +13,6 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', loadChildren: () => System.import('./dashboard/dashboard.module') },
-      { path: 'charts', loadChildren: () => System.import('./charts/charts.module') },
       { path: 'tables', loadChildren: () => System.import('./tables/tables.module') }
     ]
   }
