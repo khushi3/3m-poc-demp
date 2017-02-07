@@ -32,7 +32,7 @@ export const PAGES_MENU = [
       path: 'smarttables',
       data: {
         menu: {
-          title: 'App1',
+          title: 'product1',
         }
       }
     }
