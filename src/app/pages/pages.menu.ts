@@ -12,7 +12,25 @@ export const PAGES_MENU = [
         expanded: false,
         order: 0
       }
-    }
+    },
+    children: [
+      {
+        path: 'angularchart',
+        data: {
+          menu: {
+            title: 'Angular Chart',
+          }
+        }
+      },
+      {
+        path: 'kibanachart',
+        data: {
+          menu: {
+            title: 'Kibana Chart',
+          }
+        }
+      }
+    ]
   },
 
    {
