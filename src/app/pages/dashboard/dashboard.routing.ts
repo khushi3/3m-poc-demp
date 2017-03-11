@@ -8,6 +8,8 @@ const routes: Routes = [
     path: '',
     component: Dashboard,
     children: [
+      { path: 'angularchart'},
+      { path: 'kibanachart'}
     ]
   }
 ];
