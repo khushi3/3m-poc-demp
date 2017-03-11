@@ -29,7 +29,7 @@ font-size: 14px !important;
 color: #000;
 font-weight: $font-bolder;
 &.sort {
-font-weight: $font-bolder !important;
+font-weight: bold;
 
 &::after {
 border-bottom-color: #000 !important;
@@ -38,17 +38,15 @@ border-bottom-color: #000 !important;
 }
 
 .ng2-smart-actions {
-width: 70px;
-text-align: center;
 .actions {
 float: none;
-text-align: center;
+color: #A52A2A;
 }
 }
 
 a.ng2-smart-action {
 font-size: 14px !important;
-color: #000;
+color: #A52A2A;
 padding: 0 5px;
 display: inline-block;
 
@@ -95,9 +93,9 @@ line-height: 26px;
 }
 
 .ng2-smart-table-container table.ng2-smart-table input {
-    text-align: center;
     background-color: #A52A2A;
     text-transform: uppercase;
+    margin-left: -12px;
 }
 
 .ng2-smart-row.selected {
@@ -112,4 +110,15 @@ line-height: 26px;
     box-shadow: 0px 2px 0px #888888;
 }
 
+.ng2-smart-table-container table.ng2-smart-table a.ng2-smart-sort-link.sort {
+    font-weight: bold;
+    color: #A52A2A;
+}
+.table thead  tr th:first-child {
+    color: #A52A2A;
+    font-weight: bold;
+}
+.form-control {
+    font-size: 12px;
+}
 

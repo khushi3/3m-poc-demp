@@ -18,7 +18,7 @@ export const PAGES_MENU = [
         path: 'angularchart',
         data: {
           menu: {
-            title: 'Angular Chart',
+            title: 'Angular Dashboard ',
           }
         }
       },
@@ -26,7 +26,7 @@ export const PAGES_MENU = [
         path: 'kibanachart',
         data: {
           menu: {
-            title: 'Kibana Chart',
+            title: 'Kibana Dashboard',
           }
         }
       }

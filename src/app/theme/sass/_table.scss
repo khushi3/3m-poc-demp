@@ -6,7 +6,7 @@
         border-bottom: 1px solid #ddd;
         white-space: nowrap;
         &:first-child {
-          text-align: center;
+         // text-align: center;
         }
         &:last-child {
           padding-right: 16px;
@@ -24,7 +24,7 @@
         line-height: 35px;
         border-top: 1px solid #ddd;
         &:first-child {
-          text-align: center;
+         // text-align: center;
         }
         &:last-child {
           padding-right: 16px !important;
@@ -342,4 +342,8 @@ th {
 
 .table-responsive {
   margin-top: 10px;
+}
+
+thead {
+    overflow-y: scroll;
 }

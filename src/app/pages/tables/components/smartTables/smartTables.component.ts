@@ -37,9 +37,9 @@ export class SmartTables {
 
     },
     pager: {
-        perPage: 10,
+      perPage: 15,
     },
-     add: {
+    add: {
       addButtonContent: '<i class="ion-ios-plus-outline"></i>',
       createButtonContent: '<i class="ion-checkmark"></i>',
       cancelButtonContent: '<i class="ion-close"></i>',
@@ -50,12 +50,12 @@ export class SmartTables {
       cancelButtonContent: '<i class="ion-close"></i>',
     },
     delete: {
-      deleteButtonContent: '<i class="ion-trash-a"></i>',
+      deleteButtonContent: '<i class="ion-trash-a" style="text-align: left;"></i>',
       confirmDelete: true
     },
 
     columns: {
-     
+
       host: {
         title: myGlobals.label_server,
         type: 'string'
@@ -72,11 +72,11 @@ export class SmartTables {
       status: {
         title: myGlobals.label_Status,
         type: 'number'
-      },
-      request: {
-        title: myGlobals.label_Request,
-        type: 'string'
       }
+      // request: {
+      //   title: myGlobals.label_Request,
+      //   type: 'string'
+      // }
     }
   };
 
@@ -113,26 +113,8 @@ export class SmartTables {
     }
   }
 
-  onChangePage(event): void{
-   // console.log(event.page);
-    //if(event == 10){
-    //  return 10;
-    //}  else{
-      //return event.page;
-      //PagerComponent.perPage = event.page;
-      //this.source.perPage = event.page;
-
-      //this.pagenum = event.page;
-      
-     // console.log(this.pagenum);
-      //this.source.setPage(this.pagenum, true);
-      this.source.setPaging(1,event.page, true);
-      this.source.refresh();
-  }
-  
-
-  /*onUserSelectRow(event){
-    event.confirm.resolve();
-
-  }*/
+  // onChangePage(event): void{
+  //   this.source.setPaging(1,event.page, true);
+  //   this.source.refresh();
+  // }
 }

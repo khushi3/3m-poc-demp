@@ -6,10 +6,8 @@ import { HttpModule } from '@angular/http';
 
 import { routing }       from './tables.routing';
 import { Tables } from './tables.component';
-import { BasicTables } from './components/basicTables/basicTables.component';
 import { SmartTables } from './components/smartTables/smartTables.component';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
-import { BasicTablesService } from './components/basicTables/basicTables.service';
 import { ResponsiveTable } from './components/basicTables/components/responsiveTable';
 import { StripedTable } from './components/basicTables/components/stripedTable';
 import { BorderedTable } from './components/basicTables/components/borderedTable';
@@ -31,7 +29,6 @@ import { RestService } from  './smartTables/rest.service';
   ],
   declarations: [
     Tables,
-    BasicTables,
     SmartTables,
     HoverTable,
     BorderedTable,
@@ -41,7 +38,6 @@ import { RestService } from  './smartTables/rest.service';
     ResponsiveTable
   ],
   providers: [
-    BasicTablesService,
     RestService
     
   ]

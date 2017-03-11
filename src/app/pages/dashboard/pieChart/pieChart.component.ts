@@ -26,16 +26,7 @@ export class PieChart {
         return label.label + ': ' + label.value;
     }
     }
-
-    /*public  labelsPieOptions: any ={
-      fullWidth: true,
-      height: '300px',
-      weight: '300px',
-      tooltip: 'status'
-      
-    }
-*/
-   
+     
    public simplePieData: any;
    public simplePieOptions: any ={
       fullWidth: true,
@@ -49,10 +40,6 @@ export class PieChart {
 
    public satusChartValue: any;
    
-  // public labelsPieColor: any;
-
-   // public pieColor: any[];
- 
   constructor(private _pieChartService: PieChartService) {
 
    
@@ -70,11 +57,9 @@ export class PieChart {
 
       barDataValues= new Array(data.statusChartValues.length);
       barDataLabels= new Array(data.statusChartValues.length); 
-     // this.pieColor= new Array(data.statusChartValues.length);
       for(var i=0; i<this.satusChartValue.length; i++){
         console.log(this.satusChartValue);
          
-      //  this.pieColor[i]=this.satusChartValue[i].color;
 
         simplePieValue[i]= this.satusChartValue[i].percentage;
 
@@ -84,52 +69,17 @@ export class PieChart {
 
 
       }
-
-       
  
 this.simplePieData= {series: simplePieValue};
-//this.simpleBarData= {label:[barDataLabels,barDataLabels],series:[barDataValues,barDataValues]};
 
 this.simpleBarData= {labels:barDataLabels,series:[barDataValues,barDataLabels]};
-
-//this.labelsPieColor=this.pieColor;
-
-
 
 }, error => console.log('Could not load List of Service'));
 
      
   }
 
- /* ngAfterViewInit() {
-    if (!this._init) {
-      this._loadPieCharts();
-      this._updatePieCharts();
-      this._init = true;
-    }
-  }
-*/
- /* private _loadPieCharts() {
-
-    jQuery('.chart').each(function () {
-      let chart = jQuery(this);
-      chart.easyPieChart({
-        easing: 'easeOutBounce',
-        onStep: function (from, to, percent) {
-          jQuery(this.el).find('.percent').text(Math.round(percent));
-        },
-        barColor: jQuery(this).attr('data-rel'),
-        trackColor: 'rgba(0,0,0,0)',
-        size: 84,
-        scaleLength: 0,
-        animation: 2000,
-        lineWidth: 9,
-        lineCap: 'round',
-      });
-    });
-  }*/
- 
-public getResponsive(padding, offset) {
+ public getResponsive(padding, offset) {
     return [
       ['screen and (min-width: 1550px)', {
         chartPadding: padding,
@@ -157,12 +107,4 @@ public getResponsive(padding, offset) {
     ];
   }
  
-
-  /*private _updatePieCharts() {
-    let getRandomArbitrary = (min, max) => { return Math.random() * (max - min) + min; };
-
-    jQuery('.pie-charts .chart').each(function(index, chart) {
-      jQuery(chart).data('easyPieChart').update(getRandomArbitrary(55, 90));
-    });
-  }*/
 }
